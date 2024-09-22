@@ -1,28 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    ScalarConverter.hpp                               :+:      :+:    :+:   */
+/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:49:09 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/09/16 21:02:29 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/09/22 21:39:06 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCALARCONVERTER_HPP
+#define SCALARCONVERTER_HPP
+
 #include <string>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
 
 class ScalarConverter {
 
     public:
+    
     ScalarConverter();
     ScalarConverter(const ScalarConverter &src);
-    ScalarConverter &operator+(const ScalarConverter &src);
-    ~ScalarConverter();
+    ScalarConverter &operator=(const ScalarConverter &src);
+    virtual ~ScalarConverter();  // Use virtual if inheritance is planned
 
-    static void convertToChar(const std::string &string);
-    static void convertToInt(const std::string &string);
-    static void convertToFloat(const std::string &string);
-    static void convertToDouble(const std::string &string);
+    template<typename T>
+    static void convertToChar(T input);
+    template<typename T>
+    static void convertToInt(T input);
+    template<typename T>
+    static void convertToFloat(T input);
+    template<typename T>
+    static void convertToDouble(T input);
+    static void convertToVar(const std::string &string);
+};
 
-}
+#include "ConversionsFunctions.cpp"
+
+#endif

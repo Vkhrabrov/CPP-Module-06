@@ -6,7 +6,7 @@
 #    By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/16 20:47:10 by vkhrabro          #+#    #+#              #
-#    Updated: 2024/09/16 21:00:10 by vkhrabro         ###   ########.fr        #
+#    Updated: 2024/09/22 21:04:51 by vkhrabro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 DEPFLAGS = -MMD -MP
 
-NAME = ScalarConverter
+NAME = convert
 
 all: $(NAME)
 
