@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vadimhrabrov <vadimhrabrov@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 19:51:41 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/09/22 21:12:18 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/09/24 20:12:54 by vadimhrabro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 int main(int argc, char * argv[]){
 
-    (void)argc;
-    std::string input = argv[1];
-    ScalarConverter::convertToVar(input);
+    if (argc > 1 && argc < 3)
+    {
+        std::string input = argv[1];
+        ScalarConverter::convertToVar(input);
+    }
+    else 
+        std::cout << "The number of parameters is invalid" << std::endl;
     return 0;
 }
