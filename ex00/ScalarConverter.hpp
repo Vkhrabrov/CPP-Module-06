@@ -6,7 +6,7 @@
 /*   By: vadimhrabrov <vadimhrabrov@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:49:09 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/09/24 20:36:13 by vadimhrabro      ###   ########.fr       */
+/*   Updated: 2024/09/24 21:41:46 by vadimhrabro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <sstream>
 #include <iomanip>
 #include <cmath>
-#include <limits>
+#include <climits>
 
 class ScalarConverter {
 
