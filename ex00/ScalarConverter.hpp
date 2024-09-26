@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:49:09 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/09/26 19:09:45 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/09/26 21:44:24 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,15 @@
 
 class ScalarConverter {
 
-    public:
+    private:
     
     ScalarConverter();
     ScalarConverter(const ScalarConverter &src);
     ScalarConverter &operator=(const ScalarConverter &src);
     virtual ~ScalarConverter();  // Use virtual if inheritance is planned
 
+    public:
+    
     template<typename T>
     static void convertToChar(T input);
     template<typename T>

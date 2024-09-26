@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 22:08:33 by vadimhrabro       #+#    #+#             */
-/*   Updated: 2024/09/26 17:35:17 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/09/26 21:45:18 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 #include "Data.hpp"
 
 class Serializer {
-    public:
+    private:
         Serializer();
         Serializer(const Serializer &src);
         Serializer &operator=(const Serializer &src);
         ~Serializer();
+    public:
 
         static uintptr_t serialize(Data* ptr);
         static Data* deserialize(uintptr_t raw);
