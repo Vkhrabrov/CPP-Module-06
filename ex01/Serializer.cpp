@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vadimhrabrov <vadimhrabrov@student.42.f    +#+  +:+       +#+        */
+/*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 22:13:23 by vadimhrabro       #+#    #+#             */
-/*   Updated: 2024/09/25 23:03:27 by vadimhrabro      ###   ########.fr       */
+/*   Updated: 2024/09/26 17:38:32 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Serializer::~Serializer(){
 
 uintptr_t Serializer::serialize(Data* ptr){
     uintptr_t address = reinterpret_cast<uintptr_t>(ptr);
+    std::cout << std::endl;
     std::cout << "Pointer: " << ptr << std::endl;
     // std::cout << "Pointer as unsigned integer: " << address << std::endl;
     return address;
@@ -39,6 +40,6 @@ uintptr_t Serializer::serialize(Data* ptr){
 Data* Serializer::deserialize(uintptr_t raw){
     Data* pointer = reinterpret_cast<Data*>(raw);
     std::cout << "Unsigned integer: " << raw << std::endl;
-    std::cout << "Unsigned integer as pointer: " << pointer << std::endl;
+    std::cout << "Unsigned integer as pointer: " << pointer << std::endl << std::endl;
     return pointer;
 }

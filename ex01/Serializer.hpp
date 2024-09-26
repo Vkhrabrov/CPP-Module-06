@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vadimhrabrov <vadimhrabrov@student.42.f    +#+  +:+       +#+        */
+/*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 22:08:33 by vadimhrabro       #+#    #+#             */
-/*   Updated: 2024/09/25 23:07:05 by vadimhrabro      ###   ########.fr       */
+/*   Updated: 2024/09/26 17:35:17 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define SERIALIZER_HPP
 
 #include <iostream>
-#include <cstdint> 
+#include <stdint.h> 
 #include "Data.hpp"
 
 class Serializer {
