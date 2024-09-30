@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 21:22:33 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/09/26 19:12:52 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/09/30 13:33:22 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void ScalarConverter::convertToChar(T input) {
 
 template<typename T>
 void ScalarConverter::convertToInt(T input) {
-    // Check for NaN or infinity
     if (std::isnan(input) || std::isinf(input))
         std::cout << "int: impossible" << std::endl;
     else if (input > static_cast<float>(INT_MAX) || input < static_cast<float>(INT_MIN))
